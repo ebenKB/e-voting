@@ -1,11 +1,10 @@
 import { useContext, useState, useRef} from 'react';
 import Styles from "./login.module.css";
-import axios from 'axios';
 import { VoteContext } from '../../context/VoteContext';
 import OtpGroup from "../OtpGroup/OtpGroup";
 
 const Login = () => {
-    const [phone, setPhone] = useState("");
+    // const [phone, setPhone] = useState("");
     const {data, updateVotes} = useContext(VoteContext);
     const [canShowOtp, setCanShowOtp] = useState(false);
     const ref = useRef();
