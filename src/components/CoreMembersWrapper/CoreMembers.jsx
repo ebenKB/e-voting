@@ -46,5 +46,5 @@ const CoreMembers = () => {
     </div>
    )
 }
-{/* <OtpGroup otp="123456" size={6} /> */}
+
 export default CoreMembers;
