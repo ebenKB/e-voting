@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const initialState = {
-    presidential: "KWame Adjei",
+    presidential: "",
     vice: "",
     auth: {
         isLoggedIn: false,

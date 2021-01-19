@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ActionPanes from '../ActionPanes/ActionPanes';
-import OtpGroup from '../OtpGroup/OtpGroup';
 import GeneralSecretary from '../VotingPages/GeneralSecretary/GenSec';
 import Presidential from '../VotingPages/Presidential/Presidential';
 import FinalSecretary from "../VotingPages/FinancialSecretary/FinancialSecretary"
@@ -18,7 +17,6 @@ const CoreMembers = () => {
     const [currentPane, setCurrentPane] = useState(0);
 
     const handleSelection = (val) => {
-        console.log("This is the value we are setting", val);
         setCurrentPane(val)
     }
 
