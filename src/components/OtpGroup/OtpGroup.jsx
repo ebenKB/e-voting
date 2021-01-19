@@ -5,7 +5,6 @@ import Styles from "./Otp.module.css";
 const OtpGroup = ({ size, handleAction }) => {
     const [currentOtp, setCurrentOtp] = useState("");
     const [currentFocus, setCurrentFocus] = useState(0);
-    const [isVerifyingOpt, setVerify] = useState(true);
 
     const handleInputChange = (e, num) => {
         setCurrentFocus(num + 1);

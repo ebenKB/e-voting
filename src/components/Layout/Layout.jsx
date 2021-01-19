@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import AuxilliaryComponent from "../AuxilliaryMembersComponent/Auxilliary";
 import CoreMembers from "../CoreMembersWrapper/CoreMembers";
 import Auxilliary from "../AuxilliaryMembersComponent/Auxilliary";
 import Header from "../Header/Header";
@@ -9,8 +8,7 @@ import Login from "../Login/Login";
 
 const Layout = () => {
     const [selectedOption, setSelectedOption] = useState("core");
-    const { data: {auth}, updateVotes} = useContext(VoteContext)
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const { data: {auth}} = useContext(VoteContext)
 
     return (
         <>

@@ -1,7 +1,7 @@
 import ImageHolder from "../../ImageHolder/ImageHolder";
 import Styles from "./presidential.module.css";
 import Image from "../../../images/pres_1.jpg"
-import { useEffect, useContext } from "react";
+import { useContext } from "react";
 import { VoteContext }  from "../../../context/VoteContext";
 
 const Presidential = ({handleSelection, position, size}) => {
