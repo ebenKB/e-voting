@@ -1,0 +1,40 @@
+.wrapper{
+    width: 50%;
+    margin: auto;
+    padding: 60px;
+}
+
+.cta {
+    border: none;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    margin-top: 10px;
+}
+
+.cta:hover {
+    background: white;
+    color: green;
+}
+
+.small_container {
+    width: 360px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.small_container input {
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+@media only screen and (max-width: 440px) {
+    .wrapper { 
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+
+    .small_container {
+        width: 100%;
+    }
+}

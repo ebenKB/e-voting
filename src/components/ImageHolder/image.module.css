@@ -1,0 +1,86 @@
+.wrapper {
+    width: 220px;
+    min-height: 100px;
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.wrapper .image_container {
+    height: 200px;
+}
+
+.wrapper img {
+    width: 100%;
+    margin: auto;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wrapper .content {
+    padding: 10px;
+}
+
+.wrapper h3 {
+    padding: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.overlay {
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0, 0.75), rgba(0,0,0,0.75));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    visibility: hidden;
+    z-index: 0;
+    text-align: center;
+}
+
+.overlay button {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.wrapper:hover .overlay {
+    visibility: visible;
+}
+
+.wrapper .overlay img {
+    width: 120px;
+    height: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.lable {
+    padding: 8px;
+    color: white;
+    font-weight: 900px;
+}
+
+.blue {
+    background: blue;
+}
+
+.royal {
+    background: purple;
+}
+
+.green {
+    background: green;
+}
+
+.magenta {
+    background: magenta;
+}
+
+.gold {
+    background: gold;
+}

@@ -1,0 +1,28 @@
+.menu_options {
+    padding-left: 250px;
+    padding-right: 250px;
+    margin-top: -20px;
+}
+
+.layout_wrapper {
+    padding: 60px 250px 60px 250px;
+}
+
+
+.options {
+    color:black;
+    font-weight: bold;
+}
+
+.options.selected {
+    background: white;
+}
+
+
+@media only screen and (max-width: 440px) {
+    .layout_wrapper, .menu_options {
+        padding: 20px
+    }
+
+}
+

@@ -1,0 +1,10 @@
+button {
+    background: gray;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.pane.selected {
+    background: teal;
+}

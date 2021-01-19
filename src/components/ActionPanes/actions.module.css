@@ -1,0 +1,5 @@
+.panes_wrapper button {
+    display: block;
+    width: 90%;
+    margin: 8px auto;
+}
