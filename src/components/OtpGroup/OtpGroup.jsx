@@ -8,10 +8,8 @@ const OtpGroup = ({ size, handleAction }) => {
     const [currentFocus, setCurrentFocus] = useState(0);
     const [timeLeft, setTimeLeft] = useState(120)
 
-    let timeout = null;
-
     useEffect(() => {
-        timeout = setInterval(() => {
+        let timeout = setInterval(() => {
             if (timeLeft > 0) {
                 setTimeLeft(timeLeft - 1)
             }

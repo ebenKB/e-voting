@@ -14,7 +14,7 @@ const ImageHolder = ({image, lable="blue", name="", slogan="", team="", handleAc
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.image_container}>
-                <img src={image} alt="voter"/>
+                <img src={image} />
             </div>
             <div className={Styles.content}>
                 <h3>{name}</h3>
@@ -23,7 +23,7 @@ const ImageHolder = ({image, lable="blue", name="", slogan="", team="", handleAc
             <div className={`${Styles[lable]} ${Styles.lable}`}>{team}</div>
             <div className={Styles.overlay}>
                 <div>
-                    <img src={Finger} alt="vote_icon" />
+                    <img src={Finger} />
                 </div>
                 <button onClick={handleVoteAction}>VOTE</button>
             </div>
