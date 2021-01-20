@@ -71,4 +71,12 @@
     .header_content { 
         background-size: 100% 100%;
     }
+
+    .header_menu_r {
+        margin-left: 10px;
+    }
+
+    .header_menu_r span {
+        margin-right: 10px;
+    }
 }
