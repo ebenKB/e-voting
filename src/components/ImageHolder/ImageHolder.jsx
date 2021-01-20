@@ -23,7 +23,7 @@ const ImageHolder = ({image, lable="blue", name="", slogan="", team="", handleAc
             <div className={`${Styles[lable]} ${Styles.lable}`}>{team}</div>
             <div className={Styles.overlay}>
                 <div>
-                    <img src={Finger} />
+                    <img src={Finger} alt="image" />
                 </div>
                 <button onClick={handleVoteAction}>VOTE</button>
             </div>
