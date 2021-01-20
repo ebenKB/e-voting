@@ -1,12 +1,12 @@
 .otp_wrapper {
     width: 80%;
     padding: 60px;
-    margin: auto;
+    margin: 20px auto;
 }
 
 .otp_wrapper input{
     display: inline-flex;
-    margin: 2px;
+    margin: 10px 2px;
     width: 50px;
     padding: 20px;
     font-size: 24px;
