@@ -11,7 +11,26 @@
 .header_menu_r {
     text-align: right;
     width: 100%;
-    display: inline-flex;
+    display: flex;
+    margin-left: 80%;
+    align-items: center;
+}
+
+
+.header_menu_r button {
+    border-radius: 30px;
+    border: 1px solid rgb(68, 196, 255);
+    background-color: rgb(187, 187, 187);
+    display: flex;
+    align-items: center;
+}
+
+.header_menu_r button img {
+    margin-right: 8px;
+}
+
+.header_menu_r span {
+    margin-right: 20px;
 }
 
 .header_content {
@@ -39,6 +58,10 @@
     z-index: 1;
 }
 
+.icon {
+    width: 15px;
+    height: auto;
+}
 
 @media only screen and (max-width: 440px) {
     .heading_caption {
