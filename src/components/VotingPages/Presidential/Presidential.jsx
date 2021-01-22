@@ -3,24 +3,13 @@ import Styles from "./presidential.module.css";
 import Image from "../../../images/pres_1.jpg"
 import { useContext } from "react";
 import { VoteContext }  from "../../../context/VoteContext";
+import  Wrapper from "../../VotersWrapper/VotersWrapper";
 
-const Presidential = ({handleSelection, position, size}) => {
-    let {data, updateVotes} = useContext(VoteContext)
+const Presidential = ({handleSelection, position, size, category}) => {
+    let {checkIfVoted, clearVote} = useContext(VoteContext)
 
     const hasVoted = () => {
-        if (! data || !data["presidential"]) {
-            return false;
-        }
-
-        if(data["presidential"] !== "") {
-            return true;
-        }
-
-        return false;
-    }
-    
-    const handleClearVote = () => {
-        updateVotes({...data, presidential: ""})
+        return checkIfVoted(category);
     }
 
     const teams = [
@@ -66,10 +55,10 @@ const Presidential = ({handleSelection, position, size}) => {
             {hasVoted() && (
                 <div>
                     <h3>You have already voted for Presidential </h3>
-                    <button onClick={() => handleClearVote("presidential")}>Clear Vote</button>
+                    <button onClick={() => clearVote(category)}>Clear Vote</button>
                 </div>
             )}
-            <div className={Styles.wrapper}>
+            <Wrapper>
                 {!hasVoted() && teams.map((team) =>
                 <ImageHolder
                     image = {team.image} 
@@ -80,8 +69,9 @@ const Presidential = ({handleSelection, position, size}) => {
                     handleAction = {handleSelection}
                     position={position}
                     size = {size}
+                    category="presidential"
                 />)}
-            </div>
+            </Wrapper>
         </>
     )
 }

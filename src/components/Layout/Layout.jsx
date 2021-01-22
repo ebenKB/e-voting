@@ -17,8 +17,18 @@ const Layout = () => {
                 <div>
                     <Header />
                     <div className={Styles.menu_options}>
-                        <button onClick={() => setSelectedOption("core")} className={`${Styles.options} ${selectedOption === "core" && Styles.selected}`}>Core Members</button>
-                        <button onClick={() => setSelectedOption("aux")}  className={`${Styles.options} ${selectedOption === "aux" && Styles.selected}`}>Auxilliary Members</button>
+                        <button 
+                            onClick={() => setSelectedOption("core")}
+                            className={`${Styles.options} ${selectedOption === "core" && Styles.selected}`}
+                        >
+                            Core Members
+                        </button>
+                        <button 
+                            onClick={() => setSelectedOption("aux")}  
+                            className={`${Styles.options} ${selectedOption === "aux" && Styles.selected}`}
+                        >
+                            Auxilliary Members
+                        </button>
                     </div>
                     <div className={Styles.layout_wrapper}>
                         {selectedOption === "core" && <CoreMembers />}

@@ -3,19 +3,27 @@
 }
 
 .header_menu {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 10px 30px;
 }
 
 .header_menu_r {
+    position: relative;
     text-align: right;
-    width: 100%;
-    display: flex;
-    margin-left: 80%;
+    /* width: 100%; */
+    display: inline-flex;
+    margin-left: calc(100vw - 1200px);
     align-items: center;
+    float: right;
 }
 
+
+.header_menu_content {
+    display: flex;
+    align-items: center;
+}
 
 .header_menu_r button {
     border-radius: 30px;
@@ -29,7 +37,7 @@
     margin-right: 8px;
 }
 
-.header_menu_r span {
+.header_menu_r .header_menu_item {
     margin-right: 20px;
 }
 

@@ -27,8 +27,11 @@ const OtpGroup = ({ size, handleAction }) => {
         </span>)
     }
     const handleInputChange = (e, num) => {
-        setCurrentFocus(num + 1);
-        setCurrentOtp(currentOtp + e.target.value)
+        const { value } = e.target;
+        if (value !== "") {
+            setCurrentFocus(num + 1);
+            setCurrentOtp(currentOtp + value)
+        }
 
         if (currentOtp.length === (size - 1)) {
             handleVerifyAction()

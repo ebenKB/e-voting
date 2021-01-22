@@ -3,12 +3,17 @@ import Styles from "./image.module.css";
 import Finger from "../../images/finger.png";
 import { VoteContext } from "../../context/VoteContext";
 
-const ImageHolder = ({image, lable="blue", name="", slogan="", team="", handleAction, position}) => {
+const ImageHolder = ({image, lable="blue", name="", slogan="", team="", handleAction, position, category, size}) => {
     let {data, updateVotes} = useContext(VoteContext)
 
     const handleVoteAction = () => {
+        updateVotes({...data, [category]: name})
         handleAction(position + 1);
-        updateVotes({...data, presidential: name})
+        // if (position < size - 1) {
+        //     handleAction(position + 1);
+        // } else {
+        //     handleAction(0);
+        // }
     }
 
     return (

@@ -9,14 +9,16 @@ const Header = () => {
             <div className={Styles.header_menu}>
                 <div>XtraClass</div>
                 <div className={Styles.header_menu_r}>
-                    <span>
-                        <img src={Search} alt="" className={Styles.icon} />
-                    </span>
-                    <span>
-                        <Button 
-                            text={<span><img src={User} className={Styles.icon}  alt="" />Login</span>}
-                        />
-                    </span>
+                    <div className={Styles.header_menu_content}>
+                        <div className={Styles.header_menu_item}>
+                            <img src={Search} alt="" className={Styles.icon} />
+                        </div>
+                        <div>
+                            <Button 
+                                text={<span><img src={User} className={Styles.icon}  alt="" />Login</span>}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
            <div className={Styles.header_content}>
