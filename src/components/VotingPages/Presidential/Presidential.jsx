@@ -1,5 +1,4 @@
 import ImageHolder from "../../ImageHolder/ImageHolder";
-import Styles from "./presidential.module.css";
 import Image from "../../../images/pres_1.jpg"
 import { useContext } from "react";
 import { VoteContext }  from "../../../context/VoteContext";
