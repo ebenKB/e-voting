@@ -1,7 +1,7 @@
 import ImageHolder from "../../ImageHolder/ImageHolder";
 import Wrapper from "../../VotersWrapper/VotersWrapper";
 import Faker from 'faker';
-import Image from "../../../images/gsec.jpg";
+import Image from "../../../images/computer.jpg";
 import { useContext } from "react";
 import { VoteContext } from "../../../context/VoteContext";
 
