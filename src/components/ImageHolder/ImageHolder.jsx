@@ -9,11 +9,6 @@ const ImageHolder = ({image, lable="blue", name="", slogan="", team="", handleAc
     const handleVoteAction = () => {
         updateVotes({...data, [category]: name})
         handleAction(position + 1);
-        // if (position < size - 1) {
-        //     handleAction(position + 1);
-        // } else {
-        //     handleAction(0);
-        // }
     }
 
     return (
