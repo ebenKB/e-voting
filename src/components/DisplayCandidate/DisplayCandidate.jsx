@@ -5,7 +5,7 @@ const DisplayCandidate = ({ candidate, category}) => {
     <>
         <div className={Styles.wrapper}>
             <div className={Styles.thumbnail}>
-                <img src={candidate.image} />
+                <img src={candidate.image} alt="" />
             </div>
             <div>
                 <h3>{candidate.name}</h3>
