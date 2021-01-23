@@ -11,7 +11,7 @@ const Presidential = ({handleSelection, position, size, category}) => {
         return checkIfVoted(category);
     }
 
-    const teams = [
+    const candidates = [
         {
             name: "Adjoah Frimpong",
             slogan:"Adjoah The Leader" ,
@@ -58,16 +58,12 @@ const Presidential = ({handleSelection, position, size, category}) => {
                 </div>
             )}
             <Wrapper>
-                {!hasVoted() && teams.map((team) =>
+                {!hasVoted() && candidates.map((candidate) =>
                 <ImageHolder
-                    image = {team.image} 
-                    name={team.name} 
-                    slogan={team.slogan} 
-                    team={team.team}
-                    lable={team.lable}
                     handleAction = {handleSelection}
                     position={position}
                     size = {size}
+                    candidate={candidate}
                     category="presidential"
                 />)}
             </Wrapper>

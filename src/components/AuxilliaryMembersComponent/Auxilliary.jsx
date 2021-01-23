@@ -1,3 +1,5 @@
-const AuxilliaryComponent = () => <div>No Content Available</div>
+import VotingResults  from "../VotingPages/VotingResults/VotingResults";
+
+const AuxilliaryComponent = () => <VotingResults />
 
 export default AuxilliaryComponent;

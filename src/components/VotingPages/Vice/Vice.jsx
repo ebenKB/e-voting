@@ -8,7 +8,7 @@ import { VoteContext } from "../../../context/VoteContext";
 const Vice = ({handleSelection, position, size, category}) => {
     const {checkIfVoted, clearVote}  = useContext(VoteContext);
 
-    const teams = [
+    const candidates = [
         {
             name: Faker.name.firstName() +" "+ Faker.name.lastName(),
             slogan: Faker.lorem.sentence(5, 5),
@@ -49,13 +49,9 @@ const Vice = ({handleSelection, position, size, category}) => {
             )}
             <Wrapper>
                 {!checkIfVoted(category) && (
-                    teams.map((team) =>
+                    candidates.map((candidate) =>
                         <ImageHolder
-                            image = {team.image} 
-                            name={team.name} 
-                            slogan={team.slogan} 
-                            team={team.team}
-                            lable={team.lable}
+                            candidate={candidate}
                             handleAction = {handleSelection}
                             position={position}
                             size={size}

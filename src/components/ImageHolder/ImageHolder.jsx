@@ -3,24 +3,27 @@ import Styles from "./image.module.css";
 import Finger from "../../images/finger.png";
 import { VoteContext } from "../../context/VoteContext";
 
-const ImageHolder = ({image, lable="blue", name="", slogan="", team="", handleAction, position, category, size}) => {
+const ImageHolder = ({candidate, image, lable="blue", name = "", slogan="", team="", handleAction, position, category, size}) => {
     let {data, updateVotes} = useContext(VoteContext)
 
     const handleVoteAction = () => {
-        updateVotes({...data, [category]: name})
+        data["votes"] = {
+            ...data["votes"], [category]: candidate
+        }
+        updateVotes(data)
         handleAction(position + 1);
     }
 
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.image_container}>
-                <img src={image} alt="" />
+                <img src={candidate.image} alt="" />
             </div>
             <div className={Styles.content}>
-                <h3>{name}</h3>
-                <span>{slogan}</span>
+                <h3>{candidate.name}</h3>
+                <span>{candidate.slogan}</span>
             </div>
-            <div className={`${Styles[lable]} ${Styles.lable}`}>{team}</div>
+            <div className={`${Styles[candidate.lable]} ${Styles.lable}`}>{candidate.team}</div>
             <div className={Styles.overlay}>
                 <div>
                     <img src={Finger} alt="" />

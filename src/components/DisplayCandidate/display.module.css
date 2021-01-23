@@ -1,0 +1,33 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 170px auto;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    background: rgb(235, 235, 235);
+    border-radius: 4px;
+    /* padding: 8px; */
+    border: 1px solid rgb(238, 238, 238);
+    height: 200px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.display_container h1,
+.display_container h3,
+.wrapper h3 {
+    margin-block-start: 0;
+}
+
+.wrapper .label {
+    background: rgb(230, 230, 230);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}

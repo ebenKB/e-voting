@@ -11,7 +11,7 @@ import CordinatingSecretary from '../VotingPages/CordinatingSecretary/Cordinatin
 import PressAndInfo from '../VotingPages/PressAndInfo/PressAndInfo';
 import ComputerPrefect from '../VotingPages/ComputerPrefect/ComputerPrefect';
 import UtilityPrefect from '../VotingPages/UtilityPrefect/UtilityPrefect';
-import VotingResults from '../VotingPages/VotingResults/VotingResults';
+import VotingMessage from '../VotingPages/VotingMessage/VotingMessage';
 
 const CoreMembers = () => {
     const positionsOrder = ["presidential", "vice", "gensec", "finsec", "pro", "organizer", "cordsec", "press", "computer", "utility", "results"]
@@ -43,12 +43,12 @@ const CoreMembers = () => {
                         handleSelection={handleSelection} 
                         position={1} 
                         size={positionsOrder.length}
-                        category="vice"
+                        category="vice_presidential"
                     />}
 
                     {positionsOrder[currentPane] === positionsOrder[2] &&
                     <GeneralSecretary 
-                        category="gensec" 
+                        category="general_secretary" 
                         size={positionsOrder.length} 
                         handleSelection={handleSelection}
                         position={2}
@@ -56,7 +56,7 @@ const CoreMembers = () => {
 
                     {positionsOrder[currentPane] === positionsOrder[3] &&
                     <FinalSecretary 
-                        category="finsec"
+                        category="financial_secretary"
                         position={3}
                         size={positionsOrder.length}
                         handleSelection={handleSelection}
@@ -64,7 +64,7 @@ const CoreMembers = () => {
 
                     {positionsOrder[currentPane] === positionsOrder[4] &&
                     <PublicRelations
-                        category="pro"
+                        category="public_relations_officer"
                         size={positionsOrder.length}
                         position={4}
                         handleSelection={handleSelection}
@@ -72,7 +72,7 @@ const CoreMembers = () => {
 
                     {positionsOrder[currentPane] === positionsOrder[5] &&
                     <GeneralOrganizer
-                        category="genorg"
+                        category="general_organizer"
                         size={positionsOrder.length}
                         position={5}
                         handleSelection={handleSelection}
@@ -80,7 +80,7 @@ const CoreMembers = () => {
 
                     {positionsOrder[currentPane] === positionsOrder[6] &&
                     <CordinatingSecretary
-                        category="cordsec"
+                        category="cordinating_secretary"
                         size={positionsOrder.length}
                         position={6}
                         handleSelection={handleSelection}
@@ -88,7 +88,7 @@ const CoreMembers = () => {
 
                     {positionsOrder[currentPane] === positionsOrder[7] &&
                     <PressAndInfo
-                        category="press"
+                        category="press_and_info"
                         position={7}
                         size={positionsOrder.length}
                         handleSelection={handleSelection}
@@ -109,7 +109,8 @@ const CoreMembers = () => {
                         size={positionsOrder.length}
                         handleSelection={handleSelection}
                     />}
-                    {positionsOrder[currentPane] === positionsOrder[10] && (<VotingResults />)}
+
+                    {positionsOrder[currentPane] === positionsOrder[10] && (<VotingMessage />)}
                 </>
             )}
         </div>

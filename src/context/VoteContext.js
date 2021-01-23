@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
 
-const initialState = {
-    presidential: "",
-    vice: "",
-    auth: {
-        isLoggedIn: false,
-    }
+let persistedData = JSON.parse(localStorage.getItem('votes'));
+if (persistedData === null) {
+    persistedData = {
+        votes: {
+            presidential: null,
+            vice: null,
+        },
+
+        auth: {
+            isLoggedIn: false,
+        },
+
+        candidates: {
+            presidential: [],
+            vice: [],
+        },
+
+        users: []
+        } 
 }
+
+const initialState = {...persistedData}
 
 export const VoteContext = React.createContext(initialState)
 
@@ -16,15 +31,16 @@ const VoteContextProvider = ({ children }) => {
     
     const handleUpdateVotes = (data) => {
         setValues(data);
+        localStorage.setItem("votes", JSON.stringify(data));
     }
     
     const hasVoted = (category) => {
-        console.log("This is the category", category, values);
-        if (! values || !values[category]) {
+        console.log("This is the category", category, values["votes"][category]);
+        if (!values["votes"] || !values["votes"][category]) {
             return false;
         }
 
-        if(values[category] !== "") {
+        if(values["votes"][category] !== null) {
             return true;
         }
 
@@ -32,7 +48,9 @@ const VoteContextProvider = ({ children }) => {
     }
 
     const clearVote = (category) => {
-        setValues({...values, [category]: ""})
+        values["votes"][category] = "";
+        setValues({...values})
+        localStorage.setItem("votes", JSON.stringify(values));
     }
 
     return (

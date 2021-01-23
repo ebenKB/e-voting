@@ -8,7 +8,7 @@ import { VoteContext } from "../../../context/VoteContext";
 const ComputerPrefect = ({handleSelection, position, size, category}) => {
     const {checkIfVoted, clearVote}  = useContext(VoteContext);
 
-    const teams = [
+    const candidates = [
         {
             name: Faker.name.firstName() +" "+ Faker.name.lastName(),
             slogan:"God dey",
@@ -49,17 +49,13 @@ const ComputerPrefect = ({handleSelection, position, size, category}) => {
             )}
             <Wrapper>
                 {!checkIfVoted(category) && (
-                    teams.map((team) =>
+                    candidates.map((candidate) =>
                         <ImageHolder
-                            image = {team.image} 
-                            name={team.name} 
-                            slogan={team.slogan} 
-                            team={team.team}
-                            lable={team.lable}
                             handleAction = {handleSelection}
                             position={position}
                             size={size}
                             category={category}
+                            candidate={candidate}
                         />)
                 )}
             </Wrapper>
